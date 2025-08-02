@@ -1,3 +1,14 @@
+Amazon logo - Search by ID - nav-logo-sprites
+Email field - Search by ID - ap_email
+Continue button - Search by ID - continue
+Conditions of use link - Search by link text - Conditions of Use
+Privacy Notice link - Search by link text - Privacy Notice
+Need help link - Search by class name - a-expander-prompt
+Forgot your password link - Search by ID - auth-fpp-link-bottom
+Other issues with Sign-In link - Search by link text - Other issues with Sign-In
+Create your Amazon account button - Search by ID - createAccountSubmit
+
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
