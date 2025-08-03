@@ -1,7 +1,13 @@
-Feature: Test Scenarios for Search functionality
+Feature: Target Product Search
 
-  Scenario: User can search for a product
-    Given Open Google page
-    When Input Car into search field
-    And Click on search icon
-    Then Product results for Car are shown
+  Scenario Outline: Search for a product on Target
+    Given the user is on the Target homepage
+    When the user searches for "<product>"
+    Then they should see results for "<product>"
+
+  Examples:
+    | product |
+    | shoes   |
+    | laptop  |
+    | makeup  |
+
