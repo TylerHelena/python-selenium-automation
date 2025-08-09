@@ -39,3 +39,6 @@ class Application:
         self.search_results = SearchResultsPage(driver)
         self.product_page = ProductPage(driver)
         self.cart_page = CartPage(driver)
+
+
+
