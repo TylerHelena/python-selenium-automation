@@ -26,5 +26,16 @@ class SearchResultsPage(BasePage):
             src = img.get_attribute("src")
             assert src and "http" in src, f"Product {i + 1} has no valid image"
 
+class SearchResultsPage(BasePage):
+    LISTINGS = (By.CSS_SELECTOR, "[data-test*='@web/site-top-of-funnel/ProductCardWrapper']")
+    FIRST_PRODUCT_LINK = (By.CSS_SELECTOR, "[data-test='product-title']")
+
+    def open_first_product(self):
+        WebDriverWait(self.driver, 15).until(
+            EC.presence_of_all_elements_located(self.LISTINGS)
+        )
+        WebDriverWait(self.driver, 15).until(
+            EC.element_to_be_clickable(self.FIRST_PRODUCT_LINK)
+        ).click()
 
 
